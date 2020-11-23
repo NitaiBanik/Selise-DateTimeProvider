@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FC56ABDF-DDB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B1F5D9DC-D905-411D-ADB3-C98AB1D3CCFD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GiraffeTest.Test", "tests\GiraffeTest.Test\GiraffeTest.Test.csproj", "{2EFA9C30-D0F5-4A30-B1A5-3E3F6AB286B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeGiraffeTest.Test", "tests\GiraffeTest.Test\DateTimeGiraffeTest.Test.csproj", "{2EFA9C30-D0F5-4A30-B1A5-3E3F6AB286B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giraffe.API", "src\Giraffe.API\Giraffe.API.csproj", "{2DDF4B8B-1196-4D99-BECB-ABB4C72859BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeGiraffe.API", "src\Giraffe.API\DateTimeGiraffe.API.csproj", "{2DDF4B8B-1196-4D99-BECB-ABB4C72859BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

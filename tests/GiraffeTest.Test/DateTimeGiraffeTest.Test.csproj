@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Giraffe.API\Giraffe.API.csproj" />
+    <ProjectReference Include="..\..\src\Giraffe.API\DateTimeGiraffe.API.csproj" />
   </ItemGroup>
 
 </Project>
