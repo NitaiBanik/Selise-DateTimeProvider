@@ -1852,6 +1852,9 @@
       "DateTimeGiraffe.API/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Moq": "4.15.1"
+        },
         "compile": {
           "bin/placeholder/DateTimeGiraffe.API.dll": {}
         },
@@ -6299,8 +6302,8 @@
     },
     "DateTimeGiraffe.API/1.0.0": {
       "type": "project",
-      "path": "../../src/Giraffe.API/DateTimeGiraffe.API.csproj",
-      "msbuildProject": "../../src/Giraffe.API/DateTimeGiraffe.API.csproj"
+      "path": "../../src/DateTimeGiraffe.API/DateTimeGiraffe.API.csproj",
+      "msbuildProject": "../../src/DateTimeGiraffe.API/DateTimeGiraffe.API.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6342,9 +6345,6 @@
           "projectReferences": {
             "C:\\Users\\User\\Source\\Repos\\Test\\src\\DateTimeGiraffe.API\\DateTimeGiraffe.API.csproj": {
               "projectPath": "C:\\Users\\User\\Source\\Repos\\Test\\src\\DateTimeGiraffe.API\\DateTimeGiraffe.API.csproj"
-            },
-            "C:\\Users\\User\\Source\\Repos\\Test\\src\\Giraffe.API\\DateTimeGiraffe.API.csproj": {
-              "projectPath": "C:\\Users\\User\\Source\\Repos\\Test\\src\\Giraffe.API\\DateTimeGiraffe.API.csproj"
             }
           }
         }
