@@ -1,6 +1,8 @@
 ﻿using Giraffe.API.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Moq;
+using Giraffe.API;
 
 namespace CurrentDatetime.API.Controllers
 {
@@ -18,7 +20,12 @@ namespace CurrentDatetime.API.Controllers
         [Route("api/v1/datetimeutcnow")]
         public DateTime Now()
         {
-            return _datetimeProvider.CurrentDateTime();
+            var datetimeProviderMock = new Mock<IDateTimeProvider>();
+
+            datetimeProviderMock.Setup(d => d.Now)
+                .Returns(new DateTime(2020, 01, 01, 10, 00, 00));
+            var currentDateTime = new CurrentDateTimeProvider(datetimeProviderMock.Object);
+            return currentDateTime.CurrentTime();
         }
     }
 }

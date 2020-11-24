@@ -2,6 +2,7 @@ using Giraffe.API;
 using Giraffe.API.Abstractions;
 using Moq;
 using System;
+using FluentAssertions;
 using Xunit;
 
 namespace GiraffeTest.Test
@@ -13,13 +14,14 @@ namespace GiraffeTest.Test
         public void CurrentDateTimeTest()
         {
             var datetimeProviderMock = new Mock<IDateTimeProvider>();
-            datetimeProviderMock.Setup(d => d.CurrentDateTime())
-                .Returns(new DateTime(2020, 11, 23));
 
-            var current = new CurrentDateTimeProvider(datetimeProviderMock.Object);
+            datetimeProviderMock.Setup(d => d.Now)
+                .Returns(new DateTime(2020, 01, 01, 10, 00, 00));
 
-            current.CurrentTime().ToString().Length.Equals(4);
+            var currentDateTime = new CurrentDateTimeProvider(datetimeProviderMock.Object);
+
+            currentDateTime.CurrentTime().Hour.Should().Be(10);
+
         }
-
     }
 }

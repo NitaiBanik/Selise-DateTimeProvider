@@ -4,6 +4,6 @@ namespace Giraffe.API.Abstractions
 {
     public interface IDateTimeProvider
     {
-        DateTime CurrentDateTime();
+        public DateTime Now { get { return DateTime.Now; } }
     }
 }

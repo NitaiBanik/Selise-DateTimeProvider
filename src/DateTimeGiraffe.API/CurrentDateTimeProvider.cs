@@ -1,8 +1,5 @@
 ﻿using Giraffe.API.Abstractions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Giraffe.API
 {
@@ -17,7 +14,7 @@ namespace Giraffe.API
 
         public DateTime CurrentTime()
         {
-            return _dateTimeProvider.CurrentDateTime();
+            return _dateTimeProvider.Now;
         }
     }
 }
