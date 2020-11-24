@@ -9,6 +9,10 @@ namespace GiraffeTest.Test
 {
     public class DateTimeProviderTest
     {
+        private const int desiredHour = 9;
+        private const int marginHour = 2;
+        private const int desiredDate = 2;
+        private const int marginDate = 1;
 
         [Fact]
         public void CurrentDateTimeTest()
@@ -20,7 +24,8 @@ namespace GiraffeTest.Test
 
             var currentDateTime = new CurrentDateTimeProvider(datetimeProviderMock.Object);
 
-            currentDateTime.CurrentTime().Hour.Should().Be(10);
+            currentDateTime.CurrentTime().Hour.Should().BeCloseTo(desiredHour, marginHour, "Margin Not close to desired hour");
+            currentDateTime.CurrentTime().Day.Should().BeCloseTo(desiredDate, marginDate, "Margin Not close to desired date");
 
         }
     }

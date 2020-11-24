@@ -9,7 +9,7 @@ namespace CurrentDatetime.API.Controllers
     [ApiController]
     public class DatetimeController : ControllerBase
     {
-        private readonly IDateTimeProvider _datetimeProvider;
+        private IDateTimeProvider _datetimeProvider;
 
         public DatetimeController(IDateTimeProvider datetimeProvider)
         {
@@ -24,6 +24,7 @@ namespace CurrentDatetime.API.Controllers
 
             datetimeProviderMock.Setup(d => d.Now)
                 .Returns(new DateTime(2020, 01, 01, 10, 00, 00));
+
             var currentDateTime = new CurrentDateTimeProvider(datetimeProviderMock.Object);
             return currentDateTime.CurrentTime();
         }
